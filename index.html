@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Bill Splitter</title>
+
+        <link rel="stylesheet" href="myapp.css">
+        <link rel="stylesheet" href="normalize.css">
+
+        <!-- Font imports -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="apple-touch-icon" sizes="128x128" href="icon128.png">
+        <link rel="icon" sizes="192x192" href="icon192.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+    </head>
+    <body>
+        <div class="calculator-bottom">
+            <div class="calculator">
+                <div class="bill">
+                    <h1>BILL SPLITTER</h1>
+                    <input class="screen" id="bill" type="text" readonly>
+                </div>
+
+                <div class="billpad">
+                    <div class="grid-item">
+                        <button class="key c" id="kc">
+                            <span class="keyfront c">
+                                C
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id ="k7" value="7">
+                            <span class="keyfront">
+                                7
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k8" value="8">
+                            <span class="keyfront">
+                                8
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k9" value="9">
+                            <span class="keyfront">
+                                9
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key c" id="kd">
+                            <span class="keyfront c">
+                                &lt;
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k4" value="4">
+                            <span class="keyfront">
+                                4
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k5" value="5">
+                            <span class="keyfront">
+                                5
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k6" value="6">
+                            <span class="keyfront">
+                                6
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k0" value = "0">
+                            <span class="keyfront">
+                                0
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k1" value="1">
+                            <span class="keyfront">
+                                1
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k2" value="2">
+                            <span class="keyfront">
+                                2
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <button class="key" id="k3" value="3">
+                            <span class="keyfront">
+                                3
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            
+
+            <div class="radio-container">
+                    <b>Tip</b>
+                <label>
+                    <input id="t0" type="radio" name = "tip" value=0 checked>
+                    0%
+                </label>
+                <label>
+                    <input id="t1" type="radio" name = "tip" value=5>
+                    5%
+                </label>
+                <label>
+                    <input id="t2" type="radio" name = "tip" value=10>
+                    10%
+                </label>
+                <label>
+                    <input id="t3" type="radio" name = "tip" value=15>
+                    15%
+                </label>
+                <label>
+                    <input id="t4" type="radio" name = "tip" value=20>
+                    20%
+                </label>
+            </div>
+
+            <div class="radio-container">
+                <b>Round to</b>
+                <label>
+                    <input id="r0" type="radio" name = "round" value=1 checked>
+                    &#163;1
+                </label>
+                <label>
+                    <input id="r1" type="radio" name = "round" value=5>
+                    &#163;5
+                </label>
+                <label>
+                    <input id="r2" type="radio" name = "round" value=10>
+                    &#163;10
+                </label>
+                <label>
+                    <input id="r3" type="radio" name = "round" value=15>
+                    &#163;15
+                </label>
+            </div>
+            
+            <div class="countpad">
+                <div class="grid-item">
+                    <button class="key c" id="c2" value=2>
+                        <span class="keyfront c">
+                            2&#128113;
+                        </span>
+                    </button>
+                </div>
+                <div class="grid-item">
+                    <button class="key c" id="c3" value=3>
+                        <span class="keyfront c">
+                            3&#128113;
+                        </span>
+                    </button>            </div>
+                <div class="grid-item">
+                    <button class="key c" id="c4" value=4>
+                        <span class="keyfront c">
+                            4&#128113;
+                        </span>
+                    </button>            </div>
+                <div class="grid-item">
+                    <button class="key c" id="c5" value=5>
+                        <span class="keyfront c">
+                            5&#128113;
+                        </span>
+                    </button>            </div>
+                </div>
+                <input class="screen" id="result" type="text" readonly>
+            </div>
+        </div>
+        <div id="details"></div>
+
+        <script src="model.js"></script>
+        <script src="view.js"></script>
+        <script src="controller.js"></script>
+    </body>
+</html>
